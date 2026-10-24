@@ -1,0 +1,33 @@
+/* ===================================================================
+   SITEMAP.CSS — Peta struktur informasi situs
+   =================================================================== */
+
+.smap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 22px;
+}
+.smap-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 26px;
+  box-shadow: var(--shadow);
+}
+.smap-num {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--gold-soft);
+}
+.smap-card h2 { font-size: 19px; color: var(--primary-deep); margin-bottom: 16px; }
+.smap-card ul { list-style: none; }
+.smap-card li { padding: 10px 0; border-top: 1px dashed var(--line); }
+.smap-card li:first-child { border-top: 0; padding-top: 0; }
+.smap-card li a { display: block; font-size: 15px; font-weight: 700; color: var(--ink); transition: .2s; }
+.smap-card li a:hover { color: var(--primary); transform: translateX(3px); }
+.smap-card li small { font-size: 12.5px; color: var(--muted); }
+.smap-home { background: var(--surface-soft); }

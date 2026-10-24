@@ -1,0 +1,224 @@
+/* ============ INDEX / BERANDA ============ */
+
+.hero {
+  position: relative;
+  background: var(--grad);
+  color: #fff;
+  overflow: hidden;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(520px 300px at 85% 15%, rgba(167, 139, 250, .18), transparent 60%),
+    radial-gradient(420px 320px at 8% 90%, rgba(255, 255, 255, .07), transparent 60%);
+}
+.hero-content { position: relative; padding: 110px 24px 120px; max-width: 780px; }
+.eyebrow {
+  font-size: 12.5px; font-weight: 800; letter-spacing: 3px;
+  color: var(--gold); margin-bottom: 18px;
+}
+.hero h1 { font-size: clamp(38px, 6vw, 60px); line-height: 1.12; font-weight: 800; }
+.hero h1 span { color: var(--gold-soft); }
+.hero-text { font-size: 17px; color: #e7e0f7; max-width: 560px; margin: 22px 0 34px; }
+.hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.quick-stats { background: var(--surface); border-bottom: 1px solid var(--line); }
+.stats-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 16px; padding-top: 30px; padding-bottom: 30px;
+}
+.stats-grid > div {
+  text-align: center; padding: 14px 8px; border-radius: var(--radius-sm);
+  transition: .25s;
+}
+.stats-grid > div:hover { background: var(--surface-soft); transform: translateY(-2px); }
+.stats-grid b { display: block; font-size: 16px; color: var(--primary); letter-spacing: .5px; }
+.stats-grid span { font-size: 13px; color: var(--muted); }
+
+.section { padding: 84px 0; }
+.section.light { background: var(--surface); }
+.section h2 { font-size: clamp(28px, 4vw, 38px); font-weight: 800; line-height: 1.2; margin-bottom: 18px; }
+
+.two-col { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
+
+.profile-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 34px 32px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.section.light .profile-card { background: var(--surface-soft); }
+.profile-card::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, var(--primary), var(--gold));
+}
+.profile-card .card-icon { font-size: 26px; color: var(--primary); margin-bottom: 10px; }
+.profile-card h3 { font-size: 17px; margin-bottom: 8px; letter-spacing: .3px; }
+.profile-card p { font-size: 14.5px; color: var(--muted); }
+.profile-card .line { height: 1px; background: var(--line); margin: 20px 0; }
+
+.section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 40px; }
+.head-desc { max-width: 420px; margin-bottom: 0; }
+
+.program-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.program-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: .3s;
+}
+.section.light .program-card { background: var(--bg); }
+.program-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: transparent; }
+.program-card span {
+  display: inline-grid; place-items: center;
+  font-size: 13px; font-weight: 800; color: var(--primary);
+  background: var(--surface-soft);
+  border-radius: 999px; padding: 6px 12px; margin-bottom: 16px;
+}
+.program-card h3 { font-size: 17.5px; margin-bottom: 10px; }
+.program-card p { font-size: 14px; color: var(--muted); }
+
+.center-button { text-align: center; margin-top: 42px; }
+.center-button .btn.primary { display: inline-block; }
+
+.news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.news-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: .3s;
+}
+.news-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: transparent; }
+.news-img {
+  height: 150px;
+  display: grid; place-items: center;
+  font-weight: 800; letter-spacing: 3px; font-size: 15px; color: rgba(255, 255, 255, .92);
+}
+.news-img.img1 { background: linear-gradient(135deg, #8b6fe0, #a78bfa); }
+.news-img.img2 { background: linear-gradient(135deg, #7a5fc0, #a78bfa); }
+.news-img.img3 { background: linear-gradient(135deg, #6d4fc4, #9d84ec); }
+.news-body { padding: 22px 22px 26px; }
+.news-body small { font-size: 11.5px; font-weight: 800; letter-spacing: 1.8px; color: var(--gold); }
+.news-body h3 { font-size: 16.5px; margin: 10px 0 8px; line-height: 1.35; }
+.news-body p { font-size: 14px; color: var(--muted); }
+
+@media (max-width: 960px) {
+  .program-grid, .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .news-grid { grid-template-columns: 1fr; }
+  .two-col { grid-template-columns: 1fr; gap: 36px; }
+  .section-head { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 560px) {
+  .hero-content { padding: 80px 24px; }
+  .program-grid, .stats-grid { grid-template-columns: 1fr; }
+}
+
+/* ============ FITUR BARU BERANDA ============ */
+
+/* Orbe gradien mengambang di hero */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: .35;
+  animation: float 9s ease-in-out infinite;
+}
+.orb-1 { width: 220px; height: 220px; right: 6%; top: 12%; background: radial-gradient(circle at 30% 30%, #d8c9ff, #8b5cf6); }
+.orb-2 { width: 130px; height: 130px; right: 22%; bottom: 10%; animation-delay: 2.5s; background: radial-gradient(circle at 30% 30%, #fff0fb, #a78bfa); }
+@keyframes float { 50% { transform: translateY(-22px); } }
+
+/* Kartu statistik */
+.stat-box { text-align: center; padding: 20px 8px 14px; }
+.stat-num {
+  display: block;
+  font-size: 34px;
+  font-weight: 800;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 4px;
+}
+
+/* Kartu berita dapat diklik */
+a.news-card { display: block; color: inherit; }
+.news-img {
+  background-size: cover;
+  background-position: center;
+  text-shadow: 0 2px 10px rgba(40, 20, 80, .45);
+}
+
+/* Slider testimoni */
+.slider { position: relative; max-width: 760px; margin: auto; }
+.slides { position: relative; min-height: 240px; }
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: .6s ease;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 34px 36px;
+  box-shadow: var(--shadow);
+  pointer-events: none;
+}
+.section.light .slide { background: var(--surface-soft); }
+.slide.active { opacity: 1; transform: none; pointer-events: auto; position: relative; }
+.slide p { font-size: 17px; line-height: 1.7; color: var(--ink); font-style: italic; margin-bottom: 22px; }
+.slide footer { display: flex; align-items: center; gap: 14px; }
+.slide .avatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--grad);
+  color: #fff;
+  font-weight: 800;
+  font-size: 19px;
+  display: grid;
+  place-items: center;
+}
+.slide footer strong { display: block; font-size: 15px; }
+.slide footer span { font-size: 13px; color: var(--muted); }
+.slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 22px; }
+.slider-dots .dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--line);
+  transition: .25s;
+}
+.slider-dots .dot.active { background: var(--primary); transform: scale(1.35); }
+
+/* ---------------- Teaser kalender akademik ---------------- */
+.agenda-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.agenda-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+  transition: .25s;
+}
+.agenda-card:hover { border-color: var(--primary); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.agenda-date {
+  flex: 0 0 auto;
+  width: 58px;
+  text-align: center;
+  background: var(--surface-soft);
+  border-radius: 12px;
+  padding: 8px 4px;
+}
+.agenda-date b { display: block; font-size: 21px; color: var(--primary-deep); line-height: 1.1; }
+.agenda-date span { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; }
+.agenda-info small { font-size: 11.5px; font-weight: 800; letter-spacing: .6px; color: var(--gold); text-transform: uppercase; }
+.agenda-info strong { display: block; font-size: 14.5px; color: var(--ink); margin-top: 2px; }
+.agenda-sec { padding-top: 52px; padding-bottom: 52px; }

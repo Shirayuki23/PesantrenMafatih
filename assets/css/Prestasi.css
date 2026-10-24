@@ -1,0 +1,74 @@
+/* ===================================================================
+   PRESTASI.CSS — Halaman prestasi santri
+   =================================================================== */
+
+.prest-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.prest-sum-item {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  padding: 22px 12px;
+  box-shadow: var(--shadow);
+}
+.prest-sum-item b {
+  display: block;
+  font-size: 34px;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.prest-sum-item span { font-size: 13px; font-weight: 700; color: var(--muted); }
+
+.prest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 22px;
+}
+.prest-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 26px 24px;
+  box-shadow: var(--shadow);
+  transition: .25s;
+  overflow: hidden;
+}
+.prest-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--primary); }
+.prest-medal {
+  position: absolute;
+  top: -14px;
+  right: -8px;
+  font-size: 84px;
+  color: var(--gold-soft);
+  transform: rotate(18deg);
+  pointer-events: none;
+}
+.prest-tingkat {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+.tk-nasional { background: var(--grad); color: #fff; }
+.tk-provinsi { background: var(--gold-soft); color: var(--primary-deep); }
+.tk-kabupaten { background: var(--surface-soft); color: var(--muted); }
+.prest-card h3 { font-size: 17.5px; margin-bottom: 8px; }
+.prest-peraih { font-size: 13.5px; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+.prest-peraih i { margin-right: 6px; }
+.prest-desc { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+.prest-tgl { font-size: 12.5px; font-weight: 600; color: var(--muted); }
+.prest-tgl i { margin-right: 6px; color: var(--gold); }
+
+.prest-cta { justify-content: center; margin-top: 46px; }
